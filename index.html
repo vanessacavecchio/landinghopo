@@ -1006,6 +1006,33 @@ function smoothScroll(e,id){e.preventDefault();document.getElementById(id)?.scro
     background:var(--vr-pale);
   }
   .oferta-bonus-reminder strong { color:var(--vr-mid); }
+.pulse-btn{
+background: linear-gradient(135deg,#ff8a00,#ff2d55,#ff0055);
+background-size: 200% 200%;
+animation: pulseGlow 2s infinite, gradientMove 4s ease infinite;
+color:white!important;
+font-weight:800;
+box-shadow:0 0 25px rgba(255,0,85,.45);
+transform:scale(1);
+transition:all .3s ease;
+}
+
+.pulse-btn:hover{
+transform:scale(1.06);
+box-shadow:0 0 40px rgba(255,0,85,.7);
+}
+
+@keyframes pulseGlow{
+0%{transform:scale(1);}
+50%{transform:scale(1.04);}
+100%{transform:scale(1);}
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
 </style>
 
 <section id="oferta">
@@ -1040,7 +1067,7 @@ function smoothScroll(e,id){e.preventDefault();document.getElementById(id)?.scro
       </div>
       <div style="margin-bottom:2rem;"><div class="hero-badges" style="justify-content:center;display:flex;flex-wrap:wrap;gap:.5rem;"><span class="badge">⚡ ACCESO INMEDIATO</span><span class="badge">📱 COMPATIBLE MÓVIL</span><span class="badge">💜 PORTAL PREMIUM</span></div></div>
 
-      <a href="https://academia.mundophi.com/orden-ho-oponopono" class="oferta-cta-btn">✨ QUIERO COMENZAR MI LIMPIEZA</a>
+      <a href="https://academia.mundophi.com/orden-ho-oponopono" class="oferta-cta-btn pulse-btn">⚡ ACCEDE YA Y LLÉVATE TODO</a>
 
       <div class="oferta-guarantee">
         <span class="oferta-guar-item">🔒 Acceso inmediato</span>
