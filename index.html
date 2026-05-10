@@ -1006,32 +1006,78 @@ function smoothScroll(e,id){e.preventDefault();document.getElementById(id)?.scro
     background:var(--vr-pale);
   }
   .oferta-bonus-reminder strong { color:var(--vr-mid); }
-.pulse-btn{
-background: linear-gradient(135deg,#ff8a00,#ff2d55,#ff0055);
-background-size: 200% 200%;
-animation: pulseGlow 2s infinite, gradientMove 4s ease infinite;
-color:white!important;
-font-weight:800;
-box-shadow:0 0 25px rgba(255,0,85,.45);
-transform:scale(1);
+.mega-btn{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+background:linear-gradient(135deg,#ff7a00,#ff0066,#ff2da0);
+background-size:200% 200%;
+padding:1.5rem 2.8rem;
+border-radius:24px;
+max-width:520px;
+margin:0 auto;
+position:relative;
+overflow:hidden;
+animation:gradientMove 4s ease infinite,pulseGlow 1.8s infinite;
+box-shadow:
+0 0 25px rgba(255,0,102,.5),
+0 0 60px rgba(255,120,0,.35);
+border:4px solid rgba(255,255,255,.35);
 transition:all .3s ease;
 }
 
-.pulse-btn:hover{
-transform:scale(1.06);
-box-shadow:0 0 40px rgba(255,0,85,.7);
+.mega-btn:hover{
+transform:scale(1.05);
+box-shadow:
+0 0 35px rgba(255,0,102,.7),
+0 0 90px rgba(255,120,0,.5);
 }
 
-@keyframes pulseGlow{
-0%{transform:scale(1);}
-50%{transform:scale(1.04);}
-100%{transform:scale(1);}
+.mega-btn-main{
+font-size:2rem;
+font-weight:900;
+color:#fff;
+line-height:1;
+letter-spacing:1px;
+text-transform:uppercase;
+}
+
+.mega-btn-sub{
+font-size:1.15rem;
+font-weight:700;
+color:#fff;
+margin-top:.45rem;
+opacity:.96;
+letter-spacing:.5px;
 }
 
 @keyframes gradientMove{
 0%{background-position:0% 50%;}
 50%{background-position:100% 50%;}
 100%{background-position:0% 50%;}
+}
+
+@keyframes pulseGlow{
+0%{
+transform:scale(1);
+box-shadow:
+0 0 25px rgba(255,0,102,.45),
+0 0 60px rgba(255,120,0,.25);
+}
+50%{
+transform:scale(1.03);
+box-shadow:
+0 0 45px rgba(255,0,102,.75),
+0 0 100px rgba(255,120,0,.45);
+}
+100%{
+transform:scale(1);
+box-shadow:
+0 0 25px rgba(255,0,102,.45),
+0 0 60px rgba(255,120,0,.25);
+}
 }
 </style>
 
@@ -1067,7 +1113,10 @@ box-shadow:0 0 40px rgba(255,0,85,.7);
       </div>
       <div style="margin-bottom:2rem;"><div class="hero-badges" style="justify-content:center;display:flex;flex-wrap:wrap;gap:.5rem;"><span class="badge">⚡ ACCESO INMEDIATO</span><span class="badge">📱 COMPATIBLE MÓVIL</span><span class="badge">💜 PORTAL PREMIUM</span></div></div>
 
-      <a href="https://academia.mundophi.com/orden-ho-oponopono" class="oferta-cta-btn pulse-btn">⚡ ACCEDE YA Y LLÉVATE TODO</a>
+     <a href="https://academia.mundophi.com/orden-ho-oponopono" class="mega-btn">
+<span class="mega-btn-main">⚡ ACCEDE YA</span>
+<span class="mega-btn-sub">Y LLÉVATE TODO</span>
+</a>
 
       <div class="oferta-guarantee">
         <span class="oferta-guar-item">🔒 Acceso inmediato</span>
